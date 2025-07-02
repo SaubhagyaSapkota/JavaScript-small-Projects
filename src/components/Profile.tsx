@@ -2,7 +2,7 @@ import { PiDotsThreeVerticalLight } from "react-icons/pi";
 
 export const Profile = ({isOpen}: {isOpen: boolean}) => {
   return (
-    <div>
+    <div >
       {isOpen ? (
         <>
           <div className="flex items-center gap-2 p-2 rounded-lg bg-white hover:bg-gray-300 cursor-pointer">
@@ -11,7 +11,11 @@ export const Profile = ({isOpen}: {isOpen: boolean}) => {
               className="w-8 h-8 rounded-full"
               alt="saubhagya sapkota"
             />
-            <div className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}>
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out${
+                isOpen ? "opacity-100" : "opacity-0 w-0"
+              }`}
+            >
               <div className="flex justify-between space-x-5">
                 <div>
                   <p className="text-sm font-medium">Saubhagya sapkota</p>
@@ -25,7 +29,7 @@ export const Profile = ({isOpen}: {isOpen: boolean}) => {
       ) : (
         <img
           src="profile.jpg"
-          className="w-8 h-8 rounded-full"
+          className="w-8 h-8 rounded-full "
           alt="saubhagya sapkota"
         />
       )}

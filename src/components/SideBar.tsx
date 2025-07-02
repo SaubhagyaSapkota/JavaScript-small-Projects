@@ -26,7 +26,7 @@ const Sidebar = () => {
     <aside
       className={`${
         isOpen ? "w-64" : "w-16"
-      } bg-gray-150 h-screen border-1 m-1 rounded-2xl p-2 flex flex-col transition-all duration-500 ease-in-out justify-between`}
+      } bg-gray-150 h-screen border-1 m-1 rounded-2xl p-2 flex flex-col transition-all duration-700 ease-in-out justify-between`}
     >
       <div className="bg-gray-100 border-2 border-gray-300 rounded-2xl h-screen p-2">
         <div className="flex items-center gap-2 mb-6">
@@ -54,7 +54,9 @@ const Sidebar = () => {
               >
                 <RiHome6Line className="mt-1 mr-2 mb-3" />
                 <span
-                  className={`${isOpen ? "opacity-100 " : "opacity-0 w-0"}`}
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100 " : "opacity-0 w-0"
+                  }`}
                 >
                   Home
                 </span>
@@ -64,7 +66,11 @@ const Sidebar = () => {
                 to="/store"
               >
                 <CgShoppingBag className="mt-1 mr-2 mb-3" />
-                <span className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}>
+                <span
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100" : "opacity-0 w-0"
+                  }`}
+                >
                   Support
                 </span>
               </Link>
@@ -73,7 +79,11 @@ const Sidebar = () => {
                 to="/projects"
               >
                 <IoCubeOutline className="mt-1 mr-2 mb-3" />
-                <span className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}>
+                <span
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100" : "opacity-0 w-0"
+                  }`}
+                >
                   Projects
                 </span>
               </Link>
@@ -82,16 +92,20 @@ const Sidebar = () => {
                 to="/scheduled"
               >
                 <FaClockRotateLeft className="mt-1 mr-2 mb-4" />
-                <span className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}>
+                <span
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100" : "opacity-0 w-0"
+                  }`}
+                >
                   Scheduled
                 </span>
               </Link>
             </nav>
 
             <div
-              className={`${
-                openFolder ? "h-60" : "h-12"
-              } transition-all duration-500`}
+              className={`transition-all duration-700 ease-in-out ${
+                openFolder ? "h-60 " : "h-14"
+              } `}
             >
               <hr className="opacity-30" />
               <div className="flex justify-between hover:opacity-70 hover:-translate-y-1 transition-all duration-300 ease-in-out">
@@ -99,7 +113,7 @@ const Sidebar = () => {
                   <FaFolderClosed className="mt-1 text-xl" />
                   {isOpen && (
                     <span
-                      className={`ml-2 text-xl ${
+                      className={`ml-2 text-xl overflow-hidden transition-all duration-500 ease-in-out ${
                         isOpen ? "opacity-100" : "opacity-0 w-0"
                       }`}
                     >
@@ -109,7 +123,9 @@ const Sidebar = () => {
                 </div>
                 <button
                   onClick={folder}
-                  className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100" : "opacity-0 "
+                  }`}
                 >
                   <HiDotsHorizontal />
                 </button>
@@ -118,12 +134,10 @@ const Sidebar = () => {
               {openFolder ? (
                 <>
                   <div
-                    className={`${
-                      isOpen ? "opacity-100" : "opacity-0 w-0"
-                    } ml-6`}
+                    className={`  ${isOpen ? "opacity-100" : "opacity-0"} ml-6`}
                   >
-                    <ul className="space-y-1 pl-2">
-                      <li className="flex justify-between mb-3">
+                    <ul className="space-y-1 pl-2 overflow-hidden transition-all duration-500 ease-in-out">
+                      <li className="flex justify-between mb-3 ">
                         <span>View all</span>
                         <span>48</span>
                       </li>
@@ -156,7 +170,11 @@ const Sidebar = () => {
                 to="/file"
               >
                 <CiFileOn className="mt-1 mr-2" />
-                <span className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}>
+                <span
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100" : "opacity-0 w-0"
+                  }`}
+                >
                   Files
                 </span>
               </Link>
@@ -165,7 +183,11 @@ const Sidebar = () => {
                 to="/team"
               >
                 <BsPeople className="mt-1 mr-2" />
-                <span className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}>
+                <span
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100" : "opacity-0 w-0"
+                  }`}
+                >
                   Team
                 </span>
               </Link>
@@ -174,18 +196,26 @@ const Sidebar = () => {
                 to="/appearance"
               >
                 <TbCircleDotted className="mt-1 mr-2" />
-                <span className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}>
+                <span
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100" : "opacity-0 w-0"
+                  }`}
+                >
                   Appearance
                 </span>
               </Link>
             </div>
-            <div className="fixed bottom-5 space-y-2 text-xl">
+            <div className="fixed bottom-5 space-y-2 text-xl overflow-hidden transition-all duration-500 ease-in-out">
               <Link
                 className="flex sidebar-link hover:opacity-70 hover:-translate-y-1"
                 to="/support"
               >
                 <MdOutlineContactSupport className="mt-1 mr-2" />
-                <span className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}>
+                <span
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100" : "opacity-0 w-0"
+                  }`}
+                >
                   Support
                 </span>
               </Link>
@@ -194,7 +224,11 @@ const Sidebar = () => {
                 to="/settings"
               >
                 <IoIosSettings className="mt-1 mr-2" />
-                <span className={`${isOpen ? "opacity-100" : "opacity-0 w-0"}`}>
+                <span
+                  className={`overflow-hidden transition-all duration-500 ease-in-out${
+                    isOpen ? "opacity-100" : "opacity-0 w-0"
+                  }`}
+                >
                   Settings
                 </span>
               </Link>
