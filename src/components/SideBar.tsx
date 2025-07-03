@@ -33,12 +33,10 @@ const Sidebar = () => {
           <h1 className="flex gap-2 font-bold text-lg">
             <button onClick={opensidebar}>
               {isOpen ? (
-                <>
-                  <div className="flex space-x-2">
-                    <FaCircleNotch className="mt-1" />
-                    <span>Untitled UI</span>
-                  </div>
-                </>
+                <div className="flex space-x-2">
+                  <FaCircleNotch className="mt-1" />
+                  <span>Untitled UI</span>
+                </div>
               ) : (
                 <FaArrowCircleRight />
               )}
@@ -102,7 +100,7 @@ const Sidebar = () => {
               </Link>
             </nav>
 
-            <div
+            <nav
               className={`transition-all duration-700 ease-in-out ${
                 openFolder ? "h-60 " : "h-14"
               } `}
@@ -130,40 +128,38 @@ const Sidebar = () => {
               </div>
 
               {openFolder ? (
-                <>
-                  <div
-                    className={` overflow-hidden transition-all duration-500 ease-in-out ${
-                      isOpen ? "opacity-100" : "opacity-0"
-                    } ml-6`}
-                  >
-                    <ul className="space-y-1 pl-2 ">
-                      <li className="flex justify-between mb-3 ">
-                        <span>View all</span>
-                        <span>48</span>
-                      </li>
-                      <li className="flex justify-between mb-3">
-                        <span>Recent</span>
-                        <span>6</span>
-                      </li>
-                      <li className="flex justify-between mb-3">
-                        <span>Favorites</span>
-                        <span>4</span>
-                      </li>
-                      <li className="flex justify-between mb-3">
-                        <span>Shared</span>
-                        <span>22</span>
-                      </li>
-                      <li className="flex justify-between mb-3">
-                        <span>Archived</span>
-                        <span>14</span>
-                      </li>
-                    </ul>
-                  </div>
-                </>
+                <div
+                  className={` overflow-hidden transition-all duration-500 ease-in-out ${
+                    isOpen ? "opacity-100" : "opacity-0"
+                  } ml-6`}
+                >
+                  <ul className="space-y-1 pl-2 ">
+                    <li className="flex justify-between mb-3 ">
+                      <span>View all</span>
+                      <span>48</span>
+                    </li>
+                    <li className="flex justify-between mb-3">
+                      <span>Recent</span>
+                      <span>6</span>
+                    </li>
+                    <li className="flex justify-between mb-3">
+                      <span>Favorites</span>
+                      <span>4</span>
+                    </li>
+                    <li className="flex justify-between mb-3">
+                      <span>Shared</span>
+                      <span>22</span>
+                    </li>
+                    <li className="flex justify-between mb-3">
+                      <span>Archived</span>
+                      <span>14</span>
+                    </li>
+                  </ul>
+                </div>
               ) : null}
-            </div>
+            </nav>
 
-            <div className=" space-y-1 text-xl">
+            <nav className=" space-y-1 text-xl">
               <hr className="opacity-30" />
               <Link
                 className="flex sidebar-link hover:opacity-70 mb-3 hover:-translate-y-1"
@@ -204,8 +200,8 @@ const Sidebar = () => {
                   Appearance
                 </span>
               </Link>
-            </div>
-            <div className="fixed bottom-5 space-y-2 text-xl overflow-hidden transition-all duration-500 ease-in-out">
+            </nav>
+            <nav className="fixed bottom-5 space-y-2 text-xl overflow-hidden transition-all duration-500 ease-in-out">
               <Link
                 className="flex sidebar-link hover:opacity-70 hover:-translate-y-1"
                 to="/support"
@@ -236,7 +232,7 @@ const Sidebar = () => {
               <div>
                 <Profile isOpen={isOpen} />
               </div>
-            </div>
+            </nav>
           </>
         }
       </div>
