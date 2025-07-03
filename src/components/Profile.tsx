@@ -36,3 +36,4 @@ export const Profile = ({isOpen}: {isOpen: boolean}) => {
     </div>
   );
 };
+

@@ -71,7 +71,7 @@ const Sidebar = () => {
                     isOpen ? "opacity-100" : "opacity-0 w-0"
                   }`}
                 >
-                  Support
+                  My Store
                 </span>
               </Link>
               <Link
@@ -123,9 +123,7 @@ const Sidebar = () => {
                 </div>
                 <button
                   onClick={folder}
-                  className={`overflow-hidden transition-all duration-500 ease-in-out${
-                    isOpen ? "opacity-100" : "opacity-0 "
-                  }`}
+                  className={`${isOpen ? "opacity-100" : "opacity-0 "}`}
                 >
                   <HiDotsHorizontal />
                 </button>
@@ -134,9 +132,11 @@ const Sidebar = () => {
               {openFolder ? (
                 <>
                   <div
-                    className={`  ${isOpen ? "opacity-100" : "opacity-0"} ml-6`}
+                    className={` overflow-hidden transition-all duration-500 ease-in-out ${
+                      isOpen ? "opacity-100" : "opacity-0"
+                    } ml-6`}
                   >
-                    <ul className="space-y-1 pl-2 overflow-hidden transition-all duration-500 ease-in-out">
+                    <ul className="space-y-1 pl-2 ">
                       <li className="flex justify-between mb-3 ">
                         <span>View all</span>
                         <span>48</span>
@@ -210,10 +210,10 @@ const Sidebar = () => {
                 className="flex sidebar-link hover:opacity-70 hover:-translate-y-1"
                 to="/support"
               >
-                <MdOutlineContactSupport className="mt-1 mr-2" />
+                <MdOutlineContactSupport className="mt-1 mr-2 mb-3" />
                 <span
                   className={`overflow-hidden transition-all duration-500 ease-in-out${
-                    isOpen ? "opacity-100" : "opacity-0 w-0"
+                    isOpen ? "opacity-100 " : "opacity-0 w-0"
                   }`}
                 >
                   Support
