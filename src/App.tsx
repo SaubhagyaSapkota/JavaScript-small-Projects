@@ -11,11 +11,11 @@ const App = () => {
         Secondary
       </Button>
 
-      <Button variant="outline" size="lg">
+      <Button variant="outline" size="sm">
         Outline
       </Button>
 
-      <Button variant="text" size="sm">
+      <Button variant="rounded" size="lg">
         Text
       </Button>
 
