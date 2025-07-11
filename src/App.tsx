@@ -4,28 +4,29 @@ const App = () => {
   return (
     <div className="m-10">
       <Input
-        status="default"
-        inputsize="sm"
-        placeholder="placeholder"
-        label="Label"
-        helpertext="Helper Text"
-        textstatus="default"
-      />
-      <Input
         status="error"
-        inputsize="md"
-        placeholder="placeholder"
-        label="Label"
-        helpertext="Helper Text"
+        inputsize="sm"
+        placeholder="Name..."
+        label="UserName"
+        helpertext="Enter user name."
         textstatus="error"
       />
       <Input
         status="success"
-        inputsize="lg"
-        placeholder="placeholder"
-        label="Label"
-        helpertext="Helper Text"
+        inputsize="md"
+        placeholder="email..."
+        label="Email"
+        helpertext="Enter your email."
         textstatus="success"
+      />
+      <Input
+        status="default"
+        inputsize="lg"
+        placeholder="password..."
+        label="Password"
+        helpertext="Enter Your Password."
+        textstatus="default"
+        type="password"
       />
     </div>
   );
