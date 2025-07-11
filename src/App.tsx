@@ -1,35 +1,32 @@
-import Button from "./components/button";
+import { Input } from "./components/input";
 
 const App = () => {
   return (
-    <div className="button-container">
-      <Button variant="primary" size="sm">
-        Primary
-      </Button>
-
-      <Button variant="secondary" size="sm">
-        Secondary
-      </Button>
-
-      <Button variant="outline" size="sm">
-        Outline
-      </Button>
-
-      <Button variant="rounded" size="lg">
-        Text
-      </Button>
-
-      <Button variant="rounded" size="lg">
-        Rounded
-      </Button>
-
-      <Button variant="squared" size="md">
-        Squared
-      </Button>
-
-      <Button variant="primary" disabled>
-        Disabled
-      </Button>
+    <div className="m-10">
+      <Input
+        status="default"
+        inputsize="sm"
+        placeholder="placeholder"
+        label="Label"
+        helpertext="Helper Text"
+        textstatus="default"
+      />
+      <Input
+        status="error"
+        inputsize="md"
+        placeholder="placeholder"
+        label="Label"
+        helpertext="Helper Text"
+        textstatus="error"
+      />
+      <Input
+        status="success"
+        inputsize="lg"
+        placeholder="placeholder"
+        label="Label"
+        helpertext="Helper Text"
+        textstatus="success"
+      />
     </div>
   );
 };

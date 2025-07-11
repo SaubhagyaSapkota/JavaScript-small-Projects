@@ -1,6 +1,7 @@
 
 .btn {
     display: flex;
+    background-color: antiquewhite;
     align-items: center;
     justify-content: center;
     border: 3;

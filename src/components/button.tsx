@@ -11,6 +11,7 @@ const buttonVariants = cva("btn", {
       text: "btn--text",
       rounded: "btn--rounded",
       squared: "btn--squared",
+      disabled: "btn--disabled",
     },
     size: {
       sm: "btn--sm",
@@ -46,3 +47,38 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export default Button;
+
+
+// // in App.tsx
+
+// return (
+//   <div className="button-container">
+//     <Button variant="primary" size="sm">
+//       Primary
+//     </Button>
+
+//     <Button variant="secondary" size="sm">
+//       Secondary
+//     </Button>
+
+//     <Button variant="outline" size="sm">
+//       Outline
+//     </Button>
+
+//     <Button variant="text" size="lg">
+//       Text
+//     </Button>
+
+//     <Button variant="rounded" size="lg">
+//       Rounded
+//     </Button>
+
+//     <Button variant="squared" size="md">
+//       Squared
+//     </Button>
+
+//     <Button variant="disabled" disabled>
+//       Disabled
+//     </Button>
+//   </div>
+// );
