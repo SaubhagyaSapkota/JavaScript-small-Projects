@@ -77,9 +77,6 @@ export const Input: React.FC<InputProps> = ({
     setTextFocused(true);
   };
 
-  const handleBlur = () => {
-    setIsFocused(false);
-  };
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -94,7 +91,6 @@ export const Input: React.FC<InputProps> = ({
         <input
           className={input({ status, inputsize, className })}
           onFocus={handleFocus}
-          onBlur={handleBlur}
           type={inputType}
           {...props}
         />
@@ -129,3 +125,34 @@ export const Input: React.FC<InputProps> = ({
     </div>
   );
 };
+
+
+// use this in the App.tsx to render
+
+{/* <div className="m-10">
+  <Input
+    status="error"
+    inputsize="sm"
+    textstatus="error"
+    placeholder="Name..."
+    label="UserName"
+    helpertext="Enter user name."
+  />
+  <Input
+    status="success"
+    inputsize="md"
+    textstatus="success"
+    placeholder="email..."
+    label="Email"
+    helpertext="Enter your email."
+  />
+  <Input
+    status="default"
+    inputsize="lg"
+    textstatus="default"
+    type="password"
+    placeholder="password..."
+    label="Password"
+    helpertext="Enter Your Password."
+  />
+</div>; */}
